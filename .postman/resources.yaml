@@ -1,0 +1,11 @@
+workspace:
+  id: b9af40f2-805b-49ab-a0e9-43c85a7db01a
+cloudResources:
+  collections:
+    ../postman/collections/Admin Portal: 57536629-6f012463-af72-4936-9812-8db2771563af
+    ../postman/collections/Customer App: 57536629-bcb6c59c-2d97-4588-96d7-9f344880bdb0
+    ../postman/collections/Partner App: 57536629-ef47d7ca-e560-4713-a031-9e26b4492ae1
+  environments:
+    ../postman/environments/test.environment.yaml: 57536629-0d22ced4-3217-440e-ae45-2ff5ca8a7388
+    ../postman/environments/dev.environment.yaml: 57536629-69ce755a-3b45-4142-89fb-c483975c3db2
+    ../postman/environments/prod.environment.yaml: 57536629-add19a7b-29bb-4a7c-9a14-1fb46dbb4a1e
