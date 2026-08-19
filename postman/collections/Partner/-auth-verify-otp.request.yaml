@@ -1,0 +1,14 @@
+$kind: http-request
+name: /auth/verify-otp
+url: https://{{baseurl}}/auth/verify-otp
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"mobile\": \"9876543210\",\r
+
+    \    \"otp\": \"123456\"\r
+
+    }"
+order: 4395142022702824

@@ -1,9 +1,11 @@
-owner: "57536629"
-team: "34697172"
-lastUpdatedBy: "57536629"
-lastRevision: 1787095099000
 name: test
-color: null
-values: []
-createdAt: 2026-08-18T23:18:12.000Z
-updatedAt: 2026-08-18T23:18:19.000Z
+values:
+  - key: baseurl
+    value: ''
+  - key: username
+    value: ''
+  - key: password
+    value: ''
+  - key: token
+    value: ''
+color: 0

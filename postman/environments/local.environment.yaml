@@ -1,4 +1,4 @@
-name: prod
+name: local
 values:
   - key: baseurl
     value: ''

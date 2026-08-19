@@ -1,0 +1,7 @@
+$kind: http-request
+name: /app/bootstrap
+url: https://{{baseurl}}/app/bootstrap?partnerId=partner_001
+method: GET
+queryParams:
+  partnerId: partner_001
+order: 4256423289839501
