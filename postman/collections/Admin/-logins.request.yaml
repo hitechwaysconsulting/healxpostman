@@ -1,0 +1,11 @@
+$kind: http-request
+name: /logins
+url: "{{baseurl}}/logins"
+method: GET
+headers:
+  Authorization: "{{bearer_token_0wsf}}"
+  Content-Type: application/json
+body:
+  type: json
+  content: ""
+order: 3000

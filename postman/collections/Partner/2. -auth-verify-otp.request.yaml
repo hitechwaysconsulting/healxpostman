@@ -1,0 +1,14 @@
+$kind: http-request
+name: 2. /auth/verify-otp
+url: "{{baseurl}}/auth/verify-otp"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\": \"mohdmurtuzakhan@gmail.com\",\r
+
+    \    \"otp\": \"042085\"\r
+
+    }"
+order: 1799

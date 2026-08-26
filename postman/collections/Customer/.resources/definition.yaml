@@ -1,2 +1,10 @@
 $kind: collection
 name: Customer
+description: ""
+variables:
+  - key: bearer_token_0wsf
+    secret: true
+    disabled: false
+  - key: json_web_token_043z
+    secret: true
+    disabled: false

@@ -5,7 +5,6 @@ workspace:
 
 cloudResources:
   collections:
-    ../postman/collections/Customer: 57536629-bcb6c59c-2d97-4588-96d7-9f344880bdb0
     ../postman/collections/Admin: 57536629-6f012463-af72-4936-9812-8db2771563af
     ../postman/collections/Partner: 695cb246-ec70-452b-aae5-756de1cc37fc
   environments:

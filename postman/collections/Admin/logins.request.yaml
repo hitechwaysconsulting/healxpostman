@@ -1,0 +1,10 @@
+$kind: http-request
+name: logins
+url: "{{baseurl}}/logins"
+method: GET
+headers:
+  Authorization: "{{token}}"
+  Content-Type: application/json
+auth:
+  type: noauth
+order: 1869

@@ -2,10 +2,6 @@ name: local
 values:
   - key: baseurl
     value: ''
-  - key: username
-    value: ''
-  - key: password
-    value: ''
   - key: token
     value: ''
 color: 0
