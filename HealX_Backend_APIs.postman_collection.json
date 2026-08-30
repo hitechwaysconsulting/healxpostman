@@ -1,0 +1,281 @@
+{
+  "info": {
+    "_postman_id": "cf14a78e-268c-43c0-b7c8-9fc068058c06",
+    "name": "HealX Backend APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57809240",
+    "_collection_link": "https://go.postman.co/collection/57809240-cf14a78e-268c-43c0-b7c8-9fc068058c06?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"User1\",\r\n  \"phone\": \"+919876543210\",\r\n  \"email\": \"user1@example.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/register-customer",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "register-customer"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "jwt123",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/user/profile",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "jwt123",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"User1 Updated\",\r\n  \"email\": \"user1@example.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/user/profile",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Saved Address",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "jwt123",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"address_line1\": \"Flat 402, Sunshine Apartments\",\r\n  \"city_id\": 1,\r\n  \"state_id\": 1,\r\n  \"pincode\": \"560001\",\r\n  \"label\": \"Home\",\r\n  \"is_default\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/user/addresses",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "addresses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Saved Addresses",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "jwt123",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/user/addresses",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "addresses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Family Member",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "jwt123",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"User2\",\r\n  \"relationship\": \"Mother\",\r\n  \"age\": 55,\r\n  \"allergies\": \"None\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/user/family-members",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "family-members"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Deactivate Account",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "jwt123",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"reason\": \"Deactivating account\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/user/account",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "account"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    }
+  ]
+}

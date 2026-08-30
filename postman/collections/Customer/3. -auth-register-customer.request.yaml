@@ -1,0 +1,10 @@
+$kind: http-request
+name: Register User
+url: "{{base_url}}/auth/register-customer"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: "{\r\n  \"name\": \"User1\",\r\n  \"phone\": \"+919876543210\",\r\n  \"email\": \"user1@example.com\"\r\n}"
+order: 3000
