@@ -10,6 +10,16 @@
     {
       "name": "Register User",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{CUSTOMER_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
         "method": "POST",
         "header": [
           {
@@ -20,7 +30,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"name\": \"User1\",\r\n  \"phone\": \"+919876543210\",\r\n  \"email\": \"user1@example.com\"\r\n}",
+          "raw": "{\r\n  \"name\": \"TestUser3\",\r\n  \"phone\": \"+911237894561\",\r\n  \"email\": \"pythonicmind2@gmail.com\",\r\n  \"referral_code\": \"REFROB90\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -41,20 +51,120 @@
       "response": []
     },
     {
-      "name": "Get Profile",
+      "name": "Request OTP via Email",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"pythonicmind2@gmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/request-otp",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "request-otp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Verify OTP via Email",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"pythonicmind2@gmail.com\",\r\n  \"otp\": \"301121\"\r\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/verify-otp",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "verify-otp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Home",
       "request": {
         "auth": {
           "type": "bearer",
           "bearer": [
             {
               "key": "token",
-              "value": "jwt123",
+              "value": "{{CUSTOMER_TOKEN}}",
               "type": "string"
             }
           ]
         },
         "method": "GET",
         "header": [],
+        "url": {
+          "raw": "{{base_url}}/home",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "home"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Profile",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{CUSTOMER_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
           "raw": "{{base_url}}/user/profile",
           "host": [
@@ -76,7 +186,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "jwt123",
+              "value": "{{CUSTOMER_TOKEN}}",
               "type": "string"
             }
           ]
@@ -85,7 +195,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"name\": \"User1 Updated\",\r\n  \"email\": \"user1@example.com\"\r\n}",
+          "raw": "{\r\n  \"name\": \"TestUser3Updated\",\r\n  \"email\": \"pythonicmind2@gmail.com\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -113,7 +223,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "jwt123",
+              "value": "{{CUSTOMER_TOKEN}}",
               "type": "string"
             }
           ]
@@ -122,7 +232,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"address_line1\": \"Flat 402, Sunshine Apartments\",\r\n  \"city_id\": 1,\r\n  \"state_id\": 1,\r\n  \"pincode\": \"560001\",\r\n  \"label\": \"Home\",\r\n  \"is_default\": true\r\n}",
+          "raw": "{\r\n  \"address_line1\": \"Flat 402, Green Meadows\",\r\n  \"address_line2\": \"100 Feet Ring Road\",\r\n  \"landmark\": \"Near Metro Station\",\r\n  \"city_id\": 1,\r\n  \"state_id\": 1,\r\n  \"pincode\": \"560038\",\r\n  \"label\": \"Home\",\r\n  \"is_default\": true\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -144,19 +254,31 @@
     },
     {
       "name": "Get Saved Addresses",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "auth": {
           "type": "bearer",
           "bearer": [
             {
               "key": "token",
-              "value": "jwt123",
+              "value": "{{CUSTOMER_TOKEN}}",
               "type": "string"
             }
           ]
         },
         "method": "GET",
         "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n  {\r\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"address_line1\": \"Flat 402, Green Meadows\",\r\n    \"address_line2\": \"100 Feet Ring Road\",\r\n    \"landmark\": \"Near Metro Station\",\r\n    \"city_id\": 1,\r\n    \"state_id\": 1,\r\n    \"pincode\": \"560038\",\r\n    \"label\": \"Home\",\r\n    \"is_default\": true\r\n  }\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
         "url": {
           "raw": "{{base_url}}/user/addresses",
           "host": [
@@ -171,32 +293,134 @@
       "response": []
     },
     {
-      "name": "Add Family Member",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
+      "name": "Update Address",
       "request": {
         "auth": {
           "type": "bearer",
           "bearer": [
             {
               "key": "token",
-              "value": "jwt123",
+              "value": "{{CUSTOMER_TOKEN}}",
               "type": "string"
             }
           ]
         },
-        "method": "GET",
+        "method": "PUT",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"name\": \"User2\",\r\n  \"relationship\": \"Mother\",\r\n  \"age\": 55,\r\n  \"allergies\": \"None\"\r\n}",
+          "raw": "{\r\n  \"address_line1\": \"Flat 502, Deluxe\",\r\n  \"label\": \"Primary Residence\",\r\n  \"is_default\": true\r\n}",
           "options": {
             "raw": {
               "language": "json"
             }
           }
         },
+        "url": {
+          "raw": "{{base_url}}/user/addresses/{{ADDRESS_ID}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "addresses",
+            "{{ADDRESS_ID}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Address",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{CUSTOMER_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/user/addresses/{{ADDRESS_ID}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "addresses",
+            "{{ADDRESS_ID}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Family Member",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{CUSTOMER_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Sarah Doe\",\r\n  \"relationship\": \"Spouse\",\r\n  \"age\": 30,\r\n  \"allergies\": \"Peanuts\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/user/family-members/",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "family-members",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Family Members",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{CUSTOMER_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
         "url": {
           "raw": "{{base_url}}/user/family-members",
           "host": [
@@ -211,6 +435,89 @@
       "response": []
     },
     {
+      "name": "Update Family Member",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{CUSTOMER_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"age\": 31,\r\n  \"allergies\": \"Peanuts, Dust\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/user/family-members/{{FAMILY_ID}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "user",
+            "family-members",
+            "{{FAMILY_ID}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Family Member",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Register Partner",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{ADMIN_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Dr. Smith\",\r\n  \"phone\": \"+919811223321\",\r\n  \"email\": \"pythonicmind2@gmail.com\",\r\n  \"work_type\": \"Doctor\",\r\n  \"category\": \"Cardiology\",\r\n  \"emergency_contact\": \"+919811223302\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/register-partner",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "register-partner"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Deactivate Account",
       "request": {
         "auth": {
@@ -218,7 +525,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "jwt123",
+              "value": "{{CUSTOMER_TOKEN}}",
               "type": "string"
             }
           ]
@@ -244,6 +551,30 @@
             "account"
           ]
         }
+      },
+      "response": []
+    },
+    {
+      "name": "View OTP Audit Logs",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "View Login History",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Registered Users",
+      "request": {
+        "method": "GET",
+        "header": []
       },
       "response": []
     }
