@@ -1,0 +1,11 @@
+$kind: http-request
+name: Register Partner
+url: "{{base_url}}/auth/register-partner"
+method: POST
+headers:
+  Authorization: Bearer {{ADMIN_TOKEN}}
+  Content-Type: application/json
+body:
+  type: json
+  content: "{\r\n  \"name\": \"Dr. Smith\",\r\n  \"phone\": \"+919811223321\",\r\n  \"email\": \"pythonicmind2@gmail.com\",\r\n  \"work_type\": \"Doctor\",\r\n  \"category\": \"Cardiology\",\r\n  \"emergency_contact\": \"+919811223302\"\r\n}"
+order: 2200

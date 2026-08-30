@@ -3,6 +3,6 @@ name: Get Profile
 url: "{{base_url}}/user/profile"
 method: GET
 headers:
-  Authorization: "{{token}}"
+  Authorization: Bearer {{CUSTOMER_TOKEN}}
   Content-Type: application/json
 order: 3100

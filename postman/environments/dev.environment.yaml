@@ -8,4 +8,12 @@ values:
     value: ''
   - key: token
     value: ''
+  - key: CUSTOMER_TOKEN
+    value: ''
+  - key: ADMIN_TOKEN
+    value: ''
+  - key: ADDRESS_ID
+    value: ''
+  - key: FAMILY_ID
+    value: ''
 color: 0

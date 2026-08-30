@@ -3,9 +3,9 @@ name: Add Saved Address
 url: "{{base_url}}/user/addresses"
 method: POST
 headers:
-  Authorization: Bearer {{token}}
+  Authorization: Bearer {{CUSTOMER_TOKEN}}
   Content-Type: application/json
 body:
   type: json
-  content: "{\r\n  \"address_line1\": \"Flat 402, Sunshine Apartments\",\r\n  \"city_id\": 1,\r\n  \"state_id\": 1,\r\n  \"pincode\": \"560001\",\r\n  \"label\": \"Home\",\r\n  \"is_default\": true\r\n}"
+  content: "{\r\n  \"address_line1\": \"Flat 402, Green Meadows\",\r\n  \"address_line2\": \"100 Feet Ring Road\",\r\n  \"landmark\": \"Near Metro Station\",\r\n  \"city_id\": 1,\r\n  \"state_id\": 1,\r\n  \"pincode\": \"560038\",\r\n  \"label\": \"Home\",\r\n  \"is_default\": true\r\n}"
 order: 3300

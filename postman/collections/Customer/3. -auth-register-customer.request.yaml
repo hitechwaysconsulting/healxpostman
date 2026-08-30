@@ -3,17 +3,9 @@ name: Register User
 url: "{{base_url}}/auth/register-customer"
 method: POST
 headers:
-  Authorization: "{{token}}"
+  Authorization: Bearer {{CUSTOMER_TOKEN}}
   Content-Type: application/json
 body:
   type: json
-  content: "{\r
-
-    \  \"name\": \"Murtuza Ali Khan\",\r
-
-    \  \"phone\": \"+919876543210\",\r
-
-    \  \"email\": \"mohdmurtuzakhan@gmail.com\"\r
-
-    }"
+  content: "{\r\n  \"name\": \"TestUser3\",\r\n  \"phone\": \"+911237894561\",\r\n  \"email\": \"pythonicmind2@gmail.com\",\r\n  \"referral_code\": \"REFROB90\"\r\n}"
 order: 3000

@@ -4,9 +4,5 @@ url: "{{base_url}}/auth/request-otp"
 method: POST
 body:
   type: json
-  content: "{\r
-
-    \    \"email\": \"mohdmurtuzakhan@gmail.com\"\r
-
-    }"
+  content: "{\r\n  \"email\": \"pythonicmind2@gmail.com\"\r\n}"
 order: 1000

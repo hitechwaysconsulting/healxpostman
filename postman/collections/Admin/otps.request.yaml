@@ -1,10 +1,8 @@
 $kind: http-request
-name: otps
-url: "{{baseurl}}/otps"
+name: View OTP Audit Logs
+url: "{{base_url}}/otps"
 method: GET
 headers:
-  Authorization: "{{token}}"
+  Authorization: Bearer {{ADMIN_TOKEN}}
   Content-Type: application/json
-auth:
-  type: noauth
 order: 2000

@@ -1,0 +1,11 @@
+$kind: http-request
+name: Update Family Member
+url: "{{base_url}}/user/family-members/{{FAMILY_ID}}"
+method: PUT
+headers:
+  Authorization: Bearer {{CUSTOMER_TOKEN}}
+  Content-Type: application/json
+body:
+  type: json
+  content: "{\r\n  \"age\": 31,\r\n  \"allergies\": \"Peanuts, Dust\"\r\n}"
+order: 3550
