@@ -1,6 +1,6 @@
 $kind: http-request
 name: /home
-url: "{{baseurl}}/home"
+url: "{{base_url}}/home"
 method: GET
 headers:
   Authorization: "{{token}}"

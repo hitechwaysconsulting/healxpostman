@@ -3,8 +3,17 @@ name: Register User
 url: "{{base_url}}/auth/register-customer"
 method: POST
 headers:
+  Authorization: "{{token}}"
   Content-Type: application/json
 body:
   type: json
-  content: "{\r\n  \"name\": \"User1\",\r\n  \"phone\": \"+919876543210\",\r\n  \"email\": \"user1@example.com\"\r\n}"
+  content: "{\r
+
+    \  \"name\": \"Murtuza Ali Khan\",\r
+
+    \  \"phone\": \"+919876543210\",\r
+
+    \  \"email\": \"mohdmurtuzakhan@gmail.com\"\r
+
+    }"
 order: 3000

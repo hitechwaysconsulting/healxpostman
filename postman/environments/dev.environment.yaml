@@ -1,21 +1,11 @@
-owner: "57536629"
-team: "34697172"
-lastUpdatedBy: "57536629"
-lastRevision: 1787095447000
 name: dev
-color: null
 values:
-  - key: baseurl
-    value: ""
-    enabled: true
+  - key: base_url
+    value: ''
   - key: username
-    value: ""
-    enabled: true
+    value: ''
   - key: password
-    value: ""
-    enabled: true
+    value: ''
   - key: token
-    value: ""
-    enabled: true
-createdAt: 2026-08-18T23:17:44.000Z
-updatedAt: 2026-08-18T23:24:07.000Z
+    value: ''
+color: 0

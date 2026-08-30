@@ -5,10 +5,6 @@ method: GET
 headers:
   Authorization: Bearer {{token}}
   Content-Type: application/json
-auth:
-  type: bearer
-  bearer:
-    token: jwt123
 body:
   type: json
   content: "{\r\n  \"name\": \"User2\",\r\n  \"relationship\": \"Mother\",\r\n  \"age\": 55,\r\n  \"allergies\": \"None\"\r\n}"

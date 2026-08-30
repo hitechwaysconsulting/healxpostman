@@ -1,6 +1,6 @@
 $kind: http-request
 name: 2. /auth/verify-otp
-url: "{{baseurl}}/auth/verify-otp"
+url: "{{base_url}}/auth/verify-otp"
 method: POST
 body:
   type: json

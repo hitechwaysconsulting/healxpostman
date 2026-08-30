@@ -5,10 +5,6 @@ method: PUT
 headers:
   Authorization: Bearer {{token}}
   Content-Type: application/json
-auth:
-  type: bearer
-  bearer:
-    token: jwt123
 body:
   type: json
   content: "{\r\n  \"name\": \"User1 Updated\",\r\n  \"email\": \"user1@example.com\"\r\n}"
