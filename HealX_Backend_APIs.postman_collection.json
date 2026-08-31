@@ -8,49 +8,6 @@
   },
   "item": [
     {
-      "name": "Register User",
-      "request": {
-        "auth": {
-          "type": "bearer",
-          "bearer": [
-            {
-              "key": "token",
-              "value": "{{CUSTOMER_TOKEN}}",
-              "type": "string"
-            }
-          ]
-        },
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n  \"name\": \"TestUser3\",\r\n  \"phone\": \"+911237894561\",\r\n  \"email\": \"pythonicmind2@gmail.com\",\r\n  \"referral_code\": \"REFROB90\"\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "{{base_url}}/auth/register-customer",
-          "host": [
-            "{{base_url}}"
-          ],
-          "path": [
-            "auth",
-            "register-customer"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
       "name": "Request OTP via Email",
       "request": {
         "method": "POST",
@@ -63,7 +20,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"email\": \"pythonicmind2@gmail.com\"\r\n}",
+          "raw": "{\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"mobile\": \"+919876543210\",\r\n  \"userType\": \"customer\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -96,7 +53,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"email\": \"pythonicmind2@gmail.com\",\r\n  \"otp\": \"301121\"\r\n}"
+          "raw": "{\r\n  \"email\": \"pythonicmind2@gmail.com\",\r\n  \"otp\": \"361060\"\r\n}"
         },
         "url": {
           "raw": "{{base_url}}/auth/verify-otp",
@@ -106,6 +63,49 @@
           "path": [
             "auth",
             "verify-otp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register User",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{CUSTOMER_TOKEN}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"TestUser1\",\r\n  \"phone\": \"+911237894561\",\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"referral_code\": \"REFROB90\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/register-customer",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "register-customer"
           ]
         }
       },
