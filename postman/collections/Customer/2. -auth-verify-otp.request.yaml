@@ -4,5 +4,5 @@ url: "{{base_url}}/auth/verify-otp"
 method: POST
 body:
   type: json
-  content: "{\r\n  \"email\": \"pythonicmind2@gmail.com\",\r\n  \"otp\": \"361060\"\r\n}"
+  content: "{\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"otp\": \"192247\",\r\n  \"userType\": \"1\"\r\n}"
 order: 1799
