@@ -2,7 +2,9 @@ $kind: http-request
 name: 2. /auth/verify-otp
 url: "{{base_url}}/auth/verify-otp"
 method: POST
+headers:
+  Content-Type: application/json
 body:
   type: json
-  content: "{\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"otp\": \"192247\",\r\n  \"userType\": \"1\"\r\n}"
+  content: "{\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"otp\": \"129075\",\r\n  \"userType\": \"1\"\r\n}"
 order: 1799

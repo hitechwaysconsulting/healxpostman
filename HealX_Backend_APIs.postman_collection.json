@@ -20,7 +20,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"email\": \"pythonicmind2@gmail.com\",\r\n  \"mobile\": \"+9198765432141\",\r\n  \"userType\": \"2\"\r\n}",
+          "raw": "{\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"mobile\": \"+9198765432141\",\r\n  \"userType\": \"1\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -47,13 +47,17 @@
         "header": [
           {
             "key": "Content-Type",
-            "value": "application/json",
-            "type": "text"
+            "value": "application/json"
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"otp\": \"192247\",\r\n  \"userType\": \"1\"\r\n}"
+          "raw": "{\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"otp\": \"129075\",\r\n  \"userType\": \"1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
         },
         "url": {
           "raw": "{{base_url}}/auth/verify-otp",
@@ -63,6 +67,61 @@
           "path": [
             "auth",
             "verify-otp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Refresh Access Token",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/auth/refresh-token",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "refresh-token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"refreshToken\": \"c2e327d1ec781122494f91192d84ff1fa6dd4cc4b7d607548198742b73f7c874ee65e1fe83bf395a\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/auth/logout",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "auth",
+            "logout"
           ]
         }
       },

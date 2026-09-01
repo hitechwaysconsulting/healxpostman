@@ -1,0 +1,7 @@
+$kind: http-request
+name: Refresh Access Token
+url: "{{base_url}}/auth/refresh-token"
+method: POST
+headers:
+  Content-Type: application/json
+order: 1850
