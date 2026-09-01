@@ -6,5 +6,5 @@ headers:
   Content-Type: application/json
 body:
   type: json
-  content: "{\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"otp\": \"129075\",\r\n  \"userType\": \"1\"\r\n}"
+  content: "{\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"otp\": \"478543\",\r\n  \"userType\": 3\r\n}"
 order: 1799

@@ -6,5 +6,5 @@ headers:
   Content-Type: application/json
 body:
   type: json
-  content: "{\r\n  \"refreshToken\": \"c2e327d1ec781122494f91192d84ff1fa6dd4cc4b7d607548198742b73f7c874ee65e1fe83bf395a\"\r\n}"
+  content: "{\r\n  \"refreshToken\": \"77d45a636f256b47c6be37bba5e2b79cd453524c6a7c12adf4ebbebfa63766dce3765cd392e23197\"\r\n}"
 order: 1875

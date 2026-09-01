@@ -1,0 +1,7 @@
+$kind: http-request
+name: Get Categories
+url: "{{base_url}}/admin/categories"
+method: GET
+headers:
+  Authorization: Bearer {{ADMIN_TOKEN}}
+order: 2480

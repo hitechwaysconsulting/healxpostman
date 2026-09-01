@@ -1,0 +1,7 @@
+$kind: http-request
+name: Get Services
+url: "{{base_url}}/admin/services?status=active&category=medicated&page=1&limit=20"
+method: GET
+headers:
+  Authorization: Bearer {{ADMIN_TOKEN}}
+order: 2440

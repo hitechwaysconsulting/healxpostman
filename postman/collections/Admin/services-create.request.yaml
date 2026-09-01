@@ -1,0 +1,8 @@
+$kind: http-request
+name: Create Service
+url: "{{base_url}}/admin/services"
+method: POST
+headers:
+  Authorization: Bearer {{ADMIN_TOKEN}}
+  Content-Type: application/json
+order: 2400

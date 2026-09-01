@@ -1,0 +1,11 @@
+$kind: http-request
+name: Create Admin
+url: "{{base_url}}/admin/create-admin"
+method: POST
+headers:
+  Authorization: Bearer {{ADMIN_TOKEN}}
+  Content-Type: application/json
+body:
+  type: json
+  content: "{\r\n  \"name\": \"xyz\",\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"phone\": \"+919876543299\",\r\n  \"role_id\": 3\r\n}"
+order: 2300

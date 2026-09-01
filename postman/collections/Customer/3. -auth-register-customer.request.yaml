@@ -7,5 +7,5 @@ headers:
   Content-Type: application/json
 body:
   type: json
-  content: "{\r\n  \"name\": \"TestUser1\",\r\n  \"phone\": \"+911237894561\",\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"referral_code\": \"REFROB90\"\r\n}"
+  content: "{\r\n  \"name\": \"xyz\",\r\n  \"phone\": \"+9198765432141\",\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"referral_code\": \"\"\r\n}"
 order: 3000

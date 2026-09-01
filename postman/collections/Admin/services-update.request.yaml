@@ -1,0 +1,11 @@
+$kind: http-request
+name: Update Service
+url: "{{base_url}}/admin/services/{{SERVICE_ID}}"
+method: PUT
+headers:
+  Authorization: Bearer {{ADMIN_TOKEN}}
+  Content-Type: application/json
+body:
+  type: json
+  content: "{\r\n  \"name\": \"General Nursing Care (Updated)\",\r\n  \"base_price\": 599.00,\r\n  \"duration_minutes\": 75,\r\n  \"description\": \"Updated nursing care with blood pressure & vital checks included\",\r\n  \"prescription_mandatory\": false,\r\n  \"visible_in_app\": true,\r\n  \"status\": \"active\"\r\n}"
+order: 2420

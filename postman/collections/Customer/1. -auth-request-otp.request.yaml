@@ -2,7 +2,9 @@ $kind: http-request
 name: 1. /auth/request-otp
 url: "{{base_url}}/auth/request-otp"
 method: POST
+headers:
+  Content-Type: application/json
 body:
   type: json
-  content: "{\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"mobile\": \"+9198765432141\",\r\n  \"userType\": \"1\"\r\n}"
+  content: "{\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"mobile\": \"+9198765432141\",\r\n  \"userType\": 3\r\n}"
 order: 1000
