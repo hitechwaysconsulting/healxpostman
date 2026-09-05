@@ -2,14 +2,14 @@ name: local
 values:
   - key: base_url
     value: ''
-  - key: token
-    value: ''
   - key: CUSTOMER_TOKEN
-    value: ''
+    secret: true
   - key: ADMIN_TOKEN
     value: ''
   - key: ADDRESS_ID
     value: ''
   - key: FAMILY_ID
+    value: ''
+  - key: SUPERADMINTOKEN
     value: ''
 color: 0

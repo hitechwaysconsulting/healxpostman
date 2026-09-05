@@ -1,2 +1,12 @@
 $kind: collection
-name: Admin
+variables:
+  - key: supabase_service_role_api_key_1ct4
+    secret: true
+    disabled: false
+  - key: supabase_service_role_api_key_13v8
+    secret: true
+    disabled: false
+auth:
+  type: bearer
+  credentials:
+    token: "{{ADMIN_TOKEN}}"

@@ -5,4 +5,8 @@ method: GET
 headers:
   Authorization: Bearer {{CUSTOMER_TOKEN}}
   Content-Type: application/json
+auth:
+  type: inherit
+  credentials:
+    id: 0be7a7b0-5526-4ffd-94e7-c0a7f7a56547
 order: 3100

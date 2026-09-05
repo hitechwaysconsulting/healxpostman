@@ -4,4 +4,4 @@ url: "{{base_url}}/admin/services?status=active&category=medicated&page=1&limit=
 method: GET
 headers:
   Authorization: Bearer {{ADMIN_TOKEN}}
-order: 2440
+order: 10000

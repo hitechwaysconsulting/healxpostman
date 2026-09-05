@@ -5,4 +5,4 @@ method: POST
 headers:
   Authorization: Bearer {{ADMIN_TOKEN}}
   Content-Type: application/json
-order: 2400
+order: 8000

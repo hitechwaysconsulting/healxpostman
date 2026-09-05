@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{base_url}}/auth/verify-otp"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"email\": \"hitechwaysconsulting@gmail.com\",\r
+
+    \  \"otp\": \"355926\",\r
+
+    \  \"userType\": 3\r
+
+    }"
+order: 2000

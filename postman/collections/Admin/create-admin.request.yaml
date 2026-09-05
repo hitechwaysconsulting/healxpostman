@@ -7,5 +7,19 @@ headers:
   Content-Type: application/json
 body:
   type: json
-  content: "{\r\n  \"name\": \"xyz\",\r\n  \"email\": \"link123su@gmail.com\",\r\n  \"phone\": \"+919876543299\",\r\n  \"role_id\": 3\r\n}"
-order: 2300
+  content: "{\r
+
+    \  \"name\": \"Amin - admin\",\r
+
+    \  \"email\": \"shaikhamin795@gmail.com\",\r
+
+    \  \"phone\": \"+918770552737\",\r
+
+    \  \"role_id\": 2\r
+
+    }"
+auth:
+  type: inherit
+  credentials:
+    id: collection-D8ccEc5cFEc717B5062abBFA-bearer
+order: 2189

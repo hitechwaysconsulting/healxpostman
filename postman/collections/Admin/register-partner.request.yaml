@@ -7,5 +7,19 @@ headers:
   Content-Type: application/json
 body:
   type: json
-  content: "{\r\n  \"name\": \"Dr. Smith\",\r\n  \"phone\": \"+919811223321\",\r\n  \"email\": \"pythonicmind2@gmail.com\",\r\n  \"work_type\": \"Doctor\",\r\n  \"category\": \"Cardiology\",\r\n  \"emergency_contact\": \"+919811223302\"\r\n}"
-order: 2200
+  content: "{\r
+
+    \  \"name\": \"Dr. Smith\",\r
+
+    \  \"phone\": \"+919811223321\",\r
+
+    \  \"email\": \"pythonicmind2@gmail.com\",\r
+
+    \  \"work_type\": \"Doctor\",\r
+
+    \  \"category\": \"Cardiology\",\r
+
+    \  \"emergency_contact\": \"+919811223302\"\r
+
+    }"
+order: 6000
